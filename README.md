@@ -9,6 +9,12 @@ C ?
 C++ ?
 shell
 
+## installation
+
+git clone the repo
+npm install
+python3 main.py
+
 ## contributors
 
 n0b0dy48sheldor (Arnaud)
