@@ -1,14 +1,32 @@
 {% extends "base.html" %}
 
-{% block menu %}
-
-<p> test <p>
-
-{% endblock %}
-
-
 {% block content %}
 
-<h1> [content of the home page] </h1>
+<div>
+    <div class="gridContainer">
+        <div class="gridItem" tabindex="1" autofocus onkeypress="if (isEnterPressed(event) == true) {selectedMode('Calculations')}" onclick="selectedMode('Calculations')">Calculations</div>
+        <div class="gridItem" tabindex="2">Fonctions</div>
+        <div class="gridItem" tabindex="3">Python</div>  
+        <div class="gridItem" tabindex="4">Statistics</div>
+        <div class="gridItem" tabindex="5">Probabilities</div>
+        <div class="gridItem" tabindex="6">Equation</div>  
+        <div class="gridItem" tabindex="7">...</div>
+        <div class="gridItem" tabindex="8">...</div>
+        <div class="gridItem" tabindex="8">...</div>
+      </div>
+</div>
+
+<script>
+    function selectedMode(mode) {
+        if (mode == "Calculations") {
+            alert("Calculations")
+        }
+    }
+
+    function isEnterPressed(event) {
+        if(event.keyCode === 13) return true
+        return false
+    }
+</script>
 
 {% endblock %}

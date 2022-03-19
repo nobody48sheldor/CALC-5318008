@@ -3,26 +3,19 @@
 <head>
 	<title>CALC-5318008</title>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
 </head>
 
 <body>
 	<header>
-	<font face="Arial">
+	    <font face="Arial">
 	</header>
+
     <div class = "content">
         <div>
-            {% block menu %} {% endblock %}
-        </div>
-        <div class = "back">
-            {% block back %} {% endblock %}
-        </div>
-        <div class = "menu">
-            <h2 class = "title">
-                CLAC-5318008
-            </h2>
-            {% block content %}
-            {% endblock %}
+            {% block content %} {% endblock %}
         </div>
     </div>
+    
 </body>
 </html>
