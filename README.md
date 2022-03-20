@@ -1,8 +1,9 @@
-# OS-calc
+# CALC-5318008
 
-OS-calc is an OS made for truning your raspberry pi into a fully functionnal and powerfull scientific calculator for cheap !
 
-## installation
+CALC-5318008 is an OS made for truning your raspberry pi into a fully functionnal and powerfull scientific calculator for cheap !
+
+## Installation
 
 ```
 > git clone the repo
@@ -10,7 +11,7 @@ OS-calc is an OS made for truning your raspberry pi into a fully functionnal and
 > start.sh
 ```
 
-## contributors
+## Contributors
 
 * [**n0b0dy48sheldor**](https://github.com/nobody48sheldor)
 * [**Darkempire**](https://github.com/Darkempire78)
