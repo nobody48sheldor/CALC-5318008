@@ -1,3 +1,10 @@
+html, body, .content {
+    height: 100%;
+    margin: 0px;
+}
+
+/* Main.html */
+
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -16,4 +23,27 @@
 
 .gridItem:hover, .gridItem:focus {
     background-color: gainsboro
+}
+
+/* Calculation.html */
+
+.historyItem {
+    display: flex;
+}
+
+p.calculation {
+    width: -webkit-fill-available;
+    margin: 0px;
+}
+
+p.answer {
+    width: 25%;
+    text-align: right;
+    margin: 0px;
+}
+
+.inputArea {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

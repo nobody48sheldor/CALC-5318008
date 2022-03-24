@@ -2,10 +2,23 @@
 
 {% block content %}
 
-<div>
+
+<div class="history">
+
+    {% for calculation in calculation %}
+        <div class="historyItem">
+            <p class="calculation">{{ calculation[0] }}</p>
+            <p class="answer">{{ calculation[1] }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+
+<div class="inputArea">
     <form action="{{ url_for('submit') }}" method="post">
-        <textarea name="text"></textarea>
+        <textarea name="text">{{ request.form['content'] }}</textarea>
         <input type="submit">
+        
     </form>
 </div>
 
