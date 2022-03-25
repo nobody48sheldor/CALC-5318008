@@ -12,12 +12,9 @@ def calculate(input):
     input = input.replace("L", "limit")
     input = input.replace("E", "expr.series")
     input = input.replace("S", f"solveset(Eq{input[1:]})")
-    print(input)
     try:
         result = eval(input)
-        print(type(result))
         if isinstance(result,complex):
-            print(result.real, result.imag)
             if result.imag == 0:
                 result = result.real
             if result.real == 0:
