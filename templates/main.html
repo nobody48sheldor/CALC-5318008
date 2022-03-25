@@ -5,18 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
 </head>
-<style>
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
-
-.button:hover {
-  background-color: #555555;
-  color: white;
-}
-</style>
 
 <body>
     <font face="Arial">
@@ -26,19 +14,19 @@
     <div class="gridContainer">
         <form action="#" class="menu" method="post">
             <input type="hidden" value="calc" name="menu">
-            <button class="button button">CALC</button>
+            <button class="buttonMenu">CALCULATION</button>
         </form>
 
         <form action="#" class="menu" method="post">
             <input type="hidden" value="function" name="menu">
-            <button class="button button">FUNCTION</button>
+            <button class="buttonMenu">FUNCTION</button>
         </form>
 
         <form action="#" class="menu" method="post">
             <input type="hidden" value="program" name="menu">
-            <button class="button button">PROGRAM</button>
+            <button class="buttonMenu">PROGRAM</button>
         </form>
-        
+    </div>   
 
 </body>
 </html>

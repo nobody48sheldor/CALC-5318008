@@ -35,6 +35,22 @@ div#title {
     background-color: gainsboro
 }
 
+button.buttonMenu {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    width: -webkit-fill-available;
+    margin: 15px;
+    padding: 20px;
+    font-size: large;
+    border-radius: 15px;
+}
+  
+button.buttonMenu:hover {
+    background-color: #555555;
+    color: white;
+}
+
 /* Calculation.html */
 
 div#history {
