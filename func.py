@@ -14,8 +14,8 @@ def calculate(input):
     input = input.replace("L", "limit")
     input = input.replace("E", "expr.series")
     input = input.replace("S", "solveset(Eq")
-    if input[0] == "s":
-        input = input + ")"
+    if input.startswith("solveset(Eq"):
+        input += ")"
     try:
         result = eval(input)
         if isinstance(result,complex):
