@@ -30,7 +30,6 @@ def redirectCalc():
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
     value = request.form["text"]
-    print(value)
     result = str(func.calculate(value))
     calculation.insert(0, (value, result))
     return(render_template("calculation.html", calculation=calculation))
