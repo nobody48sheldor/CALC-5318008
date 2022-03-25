@@ -1,6 +1,6 @@
 import os
 import func
-from flask import Flask, render_template, request, flash, Response
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24).hex()
@@ -10,7 +10,6 @@ calculation = []
 @app.route("/")
 def home():
     return(render_template("main.html", calculation=[]))
-    #return(render_template("calculation.html", calculation=[]))
 
 @app.route("/", methods=["GET", "POST"])
 def redirectCalc():
@@ -19,10 +18,8 @@ def redirectCalc():
         return(render_template("calculation.html"))
     if value == "function":
         return(render_template("main.html"))
-        #return(render_template("function.html"))
     if value == "program":
         return(render_template("main.html"))
-        #return(render_template("program.html"))
     else:
         return(render_template("main.html"))
 
