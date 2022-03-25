@@ -1,4 +1,5 @@
 import os
+import func
 from flask import Flask, render_template, request, flash, Response
 
 app = Flask(__name__)
@@ -17,22 +18,22 @@ def redirectCalc():
     if value == "calc":
         return(render_template("calculation.html"))
     if value == "function":
-        return(render_template("main.html", calculation=[]))
+        return(render_template("main.html"))
         #return(render_template("function.html"))
     if value == "program":
-        return(render_template("main.html", calculation=[]))
+        return(render_template("main.html"))
         #return(render_template("program.html"))
     else:
-        return(render_template("main.html", calculation=[]))
+        return(render_template("main.html"))
 
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
     value = request.form["text"]
     print(value)
-    calculation.append((value, "result"))
+    result = str(func.calculate(value))
+    calculation.append((value, result))
     return(render_template("calculation.html", calculation=calculation))
-
 
 # https://towardsdatascience.com/using-python-flask-and-ajax-to-pass-information-between-the-client-and-server-90670c64d688
 # https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application
