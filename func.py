@@ -14,15 +14,11 @@ def calculate(input):
     input = input.replace("L", "limit")
     input = input.replace("E", "expr.series")
     input = input.replace("S", "solveset(Eq")
-    print(input[0])
     if input[0] == "s":
         input = input + ")"
-        print(input)
     try:
         result = eval(input)
-        print(type(result))
         if isinstance(result,complex):
-            print(result.real, result.imag)
             if result.imag == 0:
                 result = result.real
             if result.real == 0:
