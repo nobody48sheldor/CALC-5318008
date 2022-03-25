@@ -15,4 +15,4 @@ CALC-5318008 is an OS made for truning your raspberry pi into a fully functionna
 
 * [**n0b0dy48sheldor**](https://github.com/nobody48sheldor)
 * [**Darkempire**](https://github.com/Darkempire78)
-* [**gaetan**](https://github.com/GaetanAff)
+* [**GaetanAff**](https://github.com/GaetanAff)
