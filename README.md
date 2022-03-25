@@ -7,7 +7,7 @@ CALC-5318008 is an OS made for truning your raspberry pi into a fully functionna
 
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008
-> npm install
+> ./install.sh
 > ./start.sh
 ```
 
