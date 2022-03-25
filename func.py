@@ -1,5 +1,6 @@
 import numpy as np
 from math import *
+from cmath import *
 
 def calculate(input):
     input = input.replace("^", "**")
