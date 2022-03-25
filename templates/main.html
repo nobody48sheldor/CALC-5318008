@@ -4,15 +4,29 @@
 
 <div>
     <div class="gridContainer">
-        <div class="gridItem" tabindex="1" autofocus onkeypress="if (isEnterPressed(event) == true) {selectedMode('Calculations')}" onclick="selectedMode('Calculations')">Calculations</div>
-        <div class="gridItem" tabindex="2">Fonctions</div>
-        <div class="gridItem" tabindex="3">Python</div>  
+        <!-- <div class="gridItem" tabindex="1" autofocus onkeypress="if (isEnterPressed(event) == true) {selectedMode('Calculations')}" onclick="selectedMode('Calculations')">Calculations</div> -->
+        <form action="#" class="menu" method="post">
+          <input type="hidden" value="calc" name="menu">
+          <button type="submit">CALC</button>
+        </form>
+
+        <form action="#" class="menu" method="post">
+          <input type="hidden" value="function" name="menu">
+          <button type="submit">FUNCTION</button>
+        </form>
+
+        <form action="#" class="menu" method="post">
+          <input type="hidden" value="program" name="menu">
+          <button type="submit">PROGRAM</button>
+        </form>
+        <!-- <div class="gridItem" tabindex="2">Fonctions</div>
+        <div class="gridItem" tabindex="3">Python</div>
         <div class="gridItem" tabindex="4">Statistics</div>
         <div class="gridItem" tabindex="5">Probabilities</div>
-        <div class="gridItem" tabindex="6">Equation</div>  
+        <div class="gridItem" tabindex="6">Equation</div>
         <div class="gridItem" tabindex="7">...</div>
         <div class="gridItem" tabindex="8">...</div>
-        <div class="gridItem" tabindex="8">...</div>
+        <div class="gridItem" tabindex="8">...</div> -->
       </div>
 </div>
 
