@@ -32,7 +32,7 @@ def submit():
     value = request.form["text"]
     print(value)
     result = str(func.calculate(value))
-    calculation.append((value, result))
+    calculation.insert(0, (value, result))
     return(render_template("calculation.html", calculation=calculation))
 
 # https://towardsdatascience.com/using-python-flask-and-ajax-to-pass-information-between-the-client-and-server-90670c64d688

@@ -1,6 +1,7 @@
 html, body, .content {
     height: 100%;
     margin: 0px;
+    overflow: hidden;
 }
 
 /* Main.html */
@@ -27,8 +28,17 @@ html, body, .content {
 
 /* Calculation.html */
 
-.historyItem {
+div#history {
+    padding-bottom: 60px;
+    overflow-y: scroll;
+    height: -webkit-fill-available;
     display: flex;
+    flex-direction: column-reverse;
+}
+
+div.historyItemContent {
+    display: flex;
+    margin: 1%;
 }
 
 p.calculation {
@@ -42,8 +52,30 @@ p.answer {
     margin: 0px;
 }
 
-.inputArea {
+div#inputArea {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: white;
+}
+
+input#inputTextArea {
+    font-size: large;
+    width: 98%;
+    height: 40px;
+    resize: none;
+    padding: 0px;
+    margin: 1%;
+}
+
+input#submitButton {
+    display: none;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: none;
 }
