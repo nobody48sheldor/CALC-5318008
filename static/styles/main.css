@@ -2,6 +2,7 @@ html, body, .content {
     height: 100%;
     margin: 0px;
     overflow: hidden;
+    background-color: var(--background);
 }
 
 /* Main.html */
