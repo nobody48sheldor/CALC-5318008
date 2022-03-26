@@ -7,7 +7,7 @@ html, body, .content {
 /* Main.html */
 
 div#title {
-    background-color: #777;
+    background-color: var(--mainMenuButtonBackground);
     padding: 10px 20px 10px 20px;
     text-align: center;
     margin: 60px 22% 60px 22%;
@@ -23,8 +23,8 @@ div#title {
 }
 
 .gridItem {
-    background-color: whitesmoke;
-    border: 1px solid black;
+    background-color: var(--background);
+    border: 1px solid var(--border);
     margin: 10px;
     padding: 20px;
     font-size: 30px;
@@ -36,9 +36,9 @@ div#title {
 }
 
 button.buttonMenu {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
+    background-color: var(--background);
+    color: var(--text);
+    border: 2px solid var(--mainMenuButtonBackground);
     width: -webkit-fill-available;
     margin: 15px;
     padding: 20px;
@@ -47,8 +47,8 @@ button.buttonMenu {
 }
   
 button.buttonMenu:hover {
-    background-color: #555555;
-    color: white;
+    background-color: var(--mainMenuButtonBackground);
+    color: var(--textHover);
 }
 
 /* Calculation.html */
@@ -75,7 +75,7 @@ p.answer {
     width: 35%;
     text-align: right;
     margin: 0px;
-    color: #3e3e3e;
+    color: var(--answer);
     padding-left: 10px;
 }
 
@@ -83,7 +83,7 @@ div#inputArea {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: var(--background);
 }
 
 input#inputTextArea {
@@ -102,7 +102,7 @@ input#submitButton {
 hr {
     width: 100%;
     height: 1px;
-    background-color: #ccc;
+    background-color: var(--hr);
     border: none;
     margin: none;
 }
