@@ -30,7 +30,7 @@ In theory it should be from the **raspberry-pi 3**
 tau, Nan...
 
 ### Functions
-- `I(f(x))` for integral [`I(**f(x)**, (x, lower_bound, upper_bound))`]
+- `I(f(x))` for integral [`I(f(x), (x, lower_bound, upper_bound))`]
 - `D(f(x))` for derivatives
 - `L(f(x))` for limit
 - `S(equation)` for equations
