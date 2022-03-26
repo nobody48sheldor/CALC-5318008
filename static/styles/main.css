@@ -86,7 +86,7 @@ div#inputArea {
 
 input#inputTextArea {
     font-size: large;
-    width: 98%;
+    width: -webkit-fill-available;
     height: 40px;
     resize: none;
     padding: 0px;
