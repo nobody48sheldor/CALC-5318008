@@ -90,6 +90,7 @@ div#inputArea {
 
 input#inputTextArea {
     font-size: large;
+    color: var(--text);
     background-color: var(--background);
     width: -webkit-fill-available;
     height: 40px;
