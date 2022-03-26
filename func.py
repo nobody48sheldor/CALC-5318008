@@ -21,9 +21,7 @@ def calculate(input):
         input += ")"
     try:
         result = eval(input)
-        print(type(result))
         if isinstance(result,complex):
-            print(result.real, result.imag)
             if result.imag == 0:
                 result = result.real
             if result.real == 0:
