@@ -1,7 +1,7 @@
 # CALC-5318008
 
 
-CALC-5318008 is an OS made for truning your raspberry pi into a fully functionnal and powerfull scientific calculator for cheap !
+CALC-5318008 is an app made for turning your raspberry-pi into a fully functionnal and powerfull scientific calculator for cheap !
 
 ## Installation
 
