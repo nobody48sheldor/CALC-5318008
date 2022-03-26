@@ -72,9 +72,11 @@ p.calculation {
 }
 
 p.answer {
-    width: 25%;
+    width: 35%;
     text-align: right;
     margin: 0px;
+    color: #3e3e3e;
+    padding-left: 10px;
 }
 
 div#inputArea {
