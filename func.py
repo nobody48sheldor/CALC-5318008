@@ -1,7 +1,7 @@
 import numpy as np
+from sympy import *
 from math import *
 from cmath import *
-from sympy import *
 
 x, y, z = symbols('x y z')
 f, g = symbols('f g', cls=Function)
