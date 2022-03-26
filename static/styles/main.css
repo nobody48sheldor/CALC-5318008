@@ -3,6 +3,7 @@ html, body, .content {
     margin: 0px;
     overflow: hidden;
     background-color: var(--background);
+    color: var(--text);
 }
 
 /* Main.html */
@@ -89,6 +90,7 @@ div#inputArea {
 
 input#inputTextArea {
     font-size: large;
+    background-color: var(--background);
     width: -webkit-fill-available;
     height: 40px;
     resize: none;
