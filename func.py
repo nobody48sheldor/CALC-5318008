@@ -4,10 +4,13 @@ from cmath import *
 from sympy import *
 
 x, y, z = symbols('x y z')
+f, g = symbols('f g', cls=Function)
 
 def calculate(input):
     input = input.replace("^", "**")
     input = input.replace("=", ",")
+    input = input.replace("𝜋", "pi")
+    input = input.replace("j", "1j")
     input = input.replace("oo", "inf")
     input = input.replace("I", "integrate")
     input = input.replace("D", "diff")
