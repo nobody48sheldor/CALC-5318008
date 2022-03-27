@@ -23,6 +23,7 @@ In theory it should be from the **raspberry-pi 3**
 ## Syntax
 
 ### Numbers:
+- `ans` previous result (initialised with `None`) 
 - `inf` or `oo` for infinity
 - `pi` or  `𝜋` for pi
 - `e` for Euler's number

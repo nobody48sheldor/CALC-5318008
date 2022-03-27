@@ -28,6 +28,10 @@ def redirectCalc():
 def submit():
     value = request.form["text"]
     result = str(func.calculate(value))
+    try:
+        func.ans = float(result)
+    except:
+        print("ans not supported")
     calculation.insert(0, (value, result))
     return(render_template("calculation.html", calculation=calculation))
 
