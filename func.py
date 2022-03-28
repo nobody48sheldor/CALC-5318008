@@ -7,6 +7,7 @@ x, y, z = symbols('x y z')
 f, g = symbols('f g', cls=Function)
 
 ans = None
+history = []
 
 def calculate(input):
     input = input.replace("^", "**")
