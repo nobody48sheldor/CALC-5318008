@@ -1,10 +1,13 @@
 import numpy as np
+from sympy import *
 from math import *
 from cmath import *
-from sympy import *
 
 x, y, z = symbols('x y z')
 f, g = symbols('f g', cls=Function)
+
+ans = None
+history = []
 
 def calculate(input):
     input = input.replace("^", "**")
@@ -26,6 +29,6 @@ def calculate(input):
                 result = result.real
             if result.real == 0:
                 result = result.imag*1j
-        return(str(result))
+        return(result)
     except Exception as e:
         return(e)

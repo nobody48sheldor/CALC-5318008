@@ -2,6 +2,7 @@ import os
 import func
 import json
 from flask import Flask, render_template, request
+import numpy as np
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24).hex()
@@ -32,6 +33,12 @@ def redirectCalc():
 def submit():
     value = request.form["text"]
     result = str(func.calculate(value))
+    try:
+        func.ans = float(result)
+        func.history.append((value,float(result)))
+    except:
+        print("ans not supported")
+    print(func.history)
     calculation.insert(0, (value, result))
     return(render_template("calculation.html", calculation=calculation, config=config))
 
