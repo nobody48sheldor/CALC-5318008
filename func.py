@@ -2,6 +2,7 @@ import numpy as np
 import sympy as sym
 from math import *
 from cmath import *
+import matplotlib.pyplot as plt
 
 x, y, z = sym.symbols('x y z')
 f, g = sym.symbols('f g', cls=sym.Function)
@@ -33,6 +34,15 @@ def calculate(input):
     input = input.replace("Log", "sym.log")
     if input.startswith("sym.solveset(sym.Eq"):
         input += ")"
+    if input.startswith("plot("):
+        parameters = input.split(",",4)
+        function = parameters[0].split("(", 1)[1]
+        xmin = int(parameters[1])
+        xmax = int(parameters[2].split(")",2)[0])
+        borders = (xmin, xmax)
+        print(function, borders)
+        plot(function, borders)
+        return("plotting...")
     try:
         print()
         print("     -- input --     ")
@@ -52,3 +62,12 @@ def calculate(input):
         return(result)
     except Exception as e:
         return(e)
+
+def plot(function, bounds):
+    function = function.replace("x", "{}")
+    x = np.linspace(bounds[0], bounds[1], 200)
+    y = []
+    for i in range(200):
+        y.append(eval(function.format(i)))
+    plt.plot(x, y)
+    plt.savefig("core/plots/plot.png")
