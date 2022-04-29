@@ -11,6 +11,7 @@ with open("config.json", "r") as file:
     config = json.load(file)
 
 calculation = []
+mode_calculation = "numerical culation"
 
 @app.route("/")
 def home():
@@ -21,12 +22,29 @@ def redirectCalc():
     value = request.form["menu"]
     if value == "calc":
         return(render_template("calculation.html", calculation=[], config=config))
-    if value == "function":
+    if value == "graph":
         return(render_template("main.html", config=config))
     if value == "program":
         return(render_template("main.html", config=config))
+    if value == "settings":
+        return(render_template("settings.html", config=config))
     else:
         return(render_template("main.html", config=config))
+
+@app.route("/settings", methods=["GET", "POST"])
+def setting():
+    value = request.form["menu"]
+    if value == "mode_calculation":
+        func.mode_calc = (func.mode_calc + 1)%2
+        if func.mode_calc == 0:
+            mode_calculation = "formal calculation"
+        if func.mode_calc == 0:
+            mode_calculation = "numerical culation"
+        print(func.mode_calc)
+        func.importing(func.mode_calc)
+        return(render_template("calculation.html", calculation=[], config=config))
+    else:
+        return(render_template("settings.html", config=config))
 
 
 @app.route("/submit", methods=["GET", "POST"])

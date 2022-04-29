@@ -47,7 +47,7 @@ button.buttonMenu {
     font-size: large;
     border-radius: 15px;
 }
-  
+
 button.buttonMenu:hover {
     background-color: var(--mainMenuButtonBackground);
     color: var(--textHover);
@@ -109,4 +109,14 @@ hr {
     background-color: var(--hr);
     border: none;
     margin: none;
+}
+
+div.title{
+    width = 100%
+    background-color: var(--background);
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    margin: 10px 10% 10px 10%;
+    color = white;
+    font-size: 56px;
 }
