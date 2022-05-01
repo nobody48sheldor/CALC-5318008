@@ -65,10 +65,10 @@ def calculate(input):
 
 def plot(function, bounds):
     plt.clf()
-    function = function.replace("x", "{}")
-    x = np.linspace(bounds[0], bounds[1], 200)
+    function = function.replace("x", "({})")
+    x = np.linspace(bounds[0], bounds[1], 1000)
     y = []
-    for i in range(200):
-        y.append(eval(function.format(x[i])))
+    for i in range(1000):
+        y.append(eval(function.format((x[i]))))
     plt.plot(x, y)
     plt.savefig("static/plot.png")
