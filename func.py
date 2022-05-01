@@ -64,10 +64,11 @@ def calculate(input):
         return(e)
 
 def plot(function, bounds):
+    plt.clf()
     function = function.replace("x", "{}")
     x = np.linspace(bounds[0], bounds[1], 200)
     y = []
     for i in range(200):
-        y.append(eval(function.format(i)))
+        y.append(eval(function.format(x[i])))
     plt.plot(x, y)
-    plt.savefig("core/plots/plot.png")
+    plt.savefig("static/plot.png")

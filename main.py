@@ -1,7 +1,7 @@
 import os
 import func
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import numpy as np
 
 app = Flask(__name__)
@@ -30,22 +30,6 @@ def redirectCalc():
         return(render_template("settings.html", config=config))
     else:
         return(render_template("main.html", config=config))
-
-@app.route("/settings", methods=["GET", "POST"])
-def setting():
-    value = request.form["menu"]
-    if value == "mode_calculation":
-        func.mode_calc = (func.mode_calc + 1)%2
-        if func.mode_calc == 0:
-            mode_calculation = "formal calculation"
-        if func.mode_calc == 0:
-            mode_calculation = "numerical culation"
-        print(func.mode_calc)
-        func.importing(func.mode_calc)
-        return(render_template("calculation.html", calculation=[], config=config))
-    else:
-        return(render_template("settings.html", config=config))
-
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
