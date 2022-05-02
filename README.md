@@ -22,6 +22,11 @@ In theory it should be from the **raspberry-pi 3**
 
 ## Syntax
 
+### System
+- `clear` to cleanup
+- `ans` for the latest result
+- `history` for the history
+
 ### Numbers:
 - `ans` previous result (initialised with `None`) 
 - `inf` or `oo` for infinity
