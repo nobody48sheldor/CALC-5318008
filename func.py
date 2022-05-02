@@ -11,6 +11,8 @@ ans = None
 history = []
 
 def calculate(input):
+    input = input.strip()
+
     input = input.replace("^", "**")
     input = input.replace("=", ",")
     input = input.replace("𝜋", "pi")
@@ -33,11 +35,12 @@ def calculate(input):
     input = input.replace("arcsin", "np.arcsin")
     input = input.replace("arccos", "np.arccos")
     input = input.replace("arctan", "np.arctan")
-
     input = input.replace("Ln", "sym.ln")
     input = input.replace("Log", "sym.log")
+
     if input.startswith("sym.solveset(sym.Eq"):
         input += ")"
+
     if input.startswith("plot("):
         parameters = input.split(",",4)
         function = parameters[0].split("(", 1)[1]
@@ -47,6 +50,10 @@ def calculate(input):
         print(function, borders)
         plot(function, borders)
         return ("", "graph")
+
+    if input == "clear":
+        return ("", "clear")
+
     try:
         print()
         print("     -- input --     ")
@@ -56,6 +63,7 @@ def calculate(input):
         print("     -- input --     ")
         print()
         result = eval(str(input))
+
         if isinstance(result,complex):
             if result.imag == 0:
                 result = result.real
@@ -66,6 +74,9 @@ def calculate(input):
         return (result, "string")
     except Exception as e:
         return (e, "string")
+
+def clear():
+    return "clear"
 
 def plot(function, bounds):
     plt.clf()

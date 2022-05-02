@@ -36,19 +36,23 @@ def submit():
     value = request.form["text"]
     result, resultType = func.calculate(value)
     result = str(result)
-    try:
-        func.ans = float(result)
-        func.history.append((value,float(result)))
-    except:
-        print("ans not supported")
-    calculation.insert(0, {
-        "calculation": (value, result),
-        "type": resultType
-    })
+
+    if resultType == "clear":
+        calculation.clear()
+        
+    else:
+        try:
+            func.ans = float(result)
+            func.history.append((value,float(result)))
+        except:
+            print("ans not supported")
+        print(calculation)
+        calculation.insert(0, {
+            "calculation": (value, result),
+            "type": resultType
+        })
     return(render_template("calculation.html", calculation=calculation, config=config))
 
-# https://towardsdatascience.com/using-python-flask-and-ajax-to-pass-information-between-the-client-and-server-90670c64d688
-# https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application
 
 if __name__ == "__main__":
     app.run(debug=True)
