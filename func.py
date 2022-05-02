@@ -16,6 +16,7 @@ def calculate(input):
     input = input.replace("^", "**")
     input = input.replace("=", ",")
     input = input.replace("𝜋", "pi")
+    input = input.replace("√", "sqrt")
     input = input.replace("j", "(1j)")
     input = input.replace("oo", "inf")
     input = input.replace("I", "sym.integrate")
@@ -36,7 +37,9 @@ def calculate(input):
     input = input.replace("arccos", "np.arccos")
     input = input.replace("arctan", "np.arctan")
     input = input.replace("Ln", "sym.ln")
+    input = input.replace("ln", "log")
     input = input.replace("Log", "sym.log")
+    input = input.replace("gcd", "np.gcd")
 
     if input.startswith("sym.solveset(sym.Eq"):
         input += ")"
@@ -44,8 +47,8 @@ def calculate(input):
     if input.startswith("plot("):
         parameters = input.split(",",4)
         function = parameters[0].split("(", 1)[1]
-        xmin = int(parameters[1])
-        xmax = int(parameters[2].split(")",2)[0])
+        xmin = float(parameters[1])
+        xmax = float(parameters[2].split(")",2)[0])
         borders = (xmin, xmax)
         print(function, borders)
         plot(function, borders)
