@@ -51,7 +51,7 @@ to start :
 
 ` > ./start.sh `
 
-### WINDOWS : [ not yet implemented ]
+### WINDOWS : [ not yet tested]
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008
 ```
