@@ -44,8 +44,9 @@ tau, Nan...
 
 ###  general requirement :
 
-- python and pip
-- node js and npm
+- [Python](https://www.python.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
 
 ### GNU/LINUX and FreeBSD :
 ```
