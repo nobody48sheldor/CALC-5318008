@@ -54,6 +54,14 @@ def calculate(input):
         plot(function, borders)
         return ("", "graph")
 
+    if input.startswith("Binomial"):
+        parameters = input.split(",",4)
+        n = int(parameters[0].split("(", 1)[1])
+        p = float(parameters[1])
+        k = int(parameters[2].split(")",2)[0])
+        return(binomial(n, p ,k))
+
+
     if input == "clear":
         return ("", "clear")
 
@@ -90,3 +98,5 @@ def plot(function, bounds):
     plt.title(function)
     plt.plot(x, y)
     plt.savefig("static/plot.png")
+def binomial(n, p, k):
+    return("je suis allé dodo avant de coder ca")
