@@ -112,11 +112,11 @@ hr {
 }
 
 div.title{
-    width = 100%
+    width: 100%;
     background-color: var(--background);
     padding: 10px 20px 10px 20px;
     text-align: center;
     margin: 10px 10% 10px 10%;
-    color = white;
+    color: white;
     font-size: 56px;
 }

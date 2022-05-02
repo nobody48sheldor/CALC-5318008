@@ -8,4 +8,3 @@ do
 done
 
 chmod +x start.sh
-
