@@ -1,5 +1,3 @@
-python main.py
-sleep 0.5
-npm start
-clear
-
+start python main.py 
+start npm start
+cls

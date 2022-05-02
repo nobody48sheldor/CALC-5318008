@@ -42,6 +42,11 @@ tau, Nan...
 
 ## Installation
 
+###  general requirement :
+
+- python and pip
+- node js and npm
+
 ### GNU/LINUX and FreeBSD :
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008
@@ -51,7 +56,7 @@ to start :
 
 ` > ./start.sh `
 
-### WINDOWS : [ not yet tested]
+### WINDOWS :
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008
 ```
