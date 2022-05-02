@@ -80,10 +80,10 @@ def clear():
 
 def plot(function, bounds):
     plt.clf()
-    function = function.replace("x", "({})")
     x = np.linspace(bounds[0], bounds[1], 1000)
     y = []
     for i in range(1000):
-        y.append(eval(function.format((x[i]))))
+        y.append(eval(function.replace("x", "({})".format((x[i])))))
+    plt.title(function)
     plt.plot(x, y)
     plt.savefig("static/plot.png")
