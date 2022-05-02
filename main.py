@@ -34,14 +34,17 @@ def redirectCalc():
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
     value = request.form["text"]
-    result = str(func.calculate(value))
+    result, resultType = func.calculate(value)
+    result = str(result)
     try:
         func.ans = float(result)
         func.history.append((value,float(result)))
     except:
         print("ans not supported")
-    print(func.history)
-    calculation.insert(0, (value, result))
+    calculation.insert(0, {
+        "calculation": (value, result),
+        "type": resultType
+    })
     return(render_template("calculation.html", calculation=calculation, config=config))
 
 # https://towardsdatascience.com/using-python-flask-and-ajax-to-pass-information-between-the-client-and-server-90670c64d688

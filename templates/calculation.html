@@ -4,14 +4,14 @@
 
 <div id="history" >
 
-    {% for calculation in calculation %}
+    {% for calc in calculation %}
         <div class="historyItem" onload="autoScroll">
             <div class="historyItemContent">
-                <p class="calculation">{{ calculation[0] }}</p>
-                <p class="answer">{{ calculation[1] }}</p>
-		{% if calculation[1] == "plotting..." %}
-			<img src="{{url_for('static', filename='plot.png')}}">
-    		{% endif %}
+                <p class="calculation">{{ calc['calculation'][0] }}</p>
+                <p class="answer">{{ calc['calculation'][1] }}</p>
+            {% if calc['type'] == "graph" %}
+                <img src="{{url_for('static', filename='plot.png')}}">
+            {% endif %}
             </div>
             <hr>
         </div>

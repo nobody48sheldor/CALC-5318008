@@ -46,7 +46,7 @@ def calculate(input):
         borders = (xmin, xmax)
         print(function, borders)
         plot(function, borders)
-        return("plotting...")
+        return ("", "graph")
     try:
         print()
         print("     -- input --     ")
@@ -63,9 +63,9 @@ def calculate(input):
                 result = result.imag*1j
         result = str(result).replace("I", " i ")
         result = str(result).replace("j", " i ")
-        return(result)
+        return (result, "string")
     except Exception as e:
-        return(e)
+        return (e, "string")
 
 def plot(function, bounds):
     plt.clf()
