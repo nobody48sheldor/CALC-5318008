@@ -55,7 +55,7 @@ tau, Nan...
 
 ### GNU/LINUX and FreeBSD :
 ```
-> git clone https://github.com/nobody48sheldor/CALC-5318008
+> git clone https://github.com/nobody48sheldor/CALC-5318008/tree/main
 > ./install.sh
 ```
 to start : 
@@ -64,7 +64,7 @@ to start :
 
 ### WINDOWS :
 ```
-> git clone https://github.com/nobody48sheldor/CALC-5318008
+> git clone https://github.com/nobody48sheldor/CALC-5318008/tree/main
 ```
 - double click on `"install.bat"`
 
