@@ -12,9 +12,45 @@
 	    <font face="Arial">
 	</header>
 
+	<div class="topBar">
+        <button onclick="openOrCloseBurger()" id="topBarButtonDropdown">
+			<span class="burgerIcon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</button>
+    </div>
+
+	<div id="dropdown">
+		<form action="#" class="menu" method="post">
+            <input type="hidden" value="menu" name="menu">
+            <button class="buttonMenu">MENU</button>
+        </form>
+		<form action="settings" class="menu" method="post">
+            <input type="hidden" value="settings" name="menu">
+            <button class="buttonMenu">SETTINGS</button>
+        </form>
+        <form action="#" class="menu" method="post">
+            <input type="hidden" value="shutdown" name="menu">
+            <button class="buttonMenu">SHUTDOWN</button>
+        </form>
+    </div>
+
     <div class = "content">
         {% block content %} {% endblock %}
     </div>
+
+	<script>
+		function openOrCloseBurger() {
+			let dropdown = document.getElementById("dropdown");
+			if (dropdown.classList.contains('showDropdown')) {
+				dropdown.classList.remove('showDropdown');
+			} else {
+				dropdown.classList.add('showDropdown');
+			}
+		}
+	</script>
     
 </body>
 </html>

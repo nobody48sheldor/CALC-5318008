@@ -56,6 +56,7 @@ button.buttonMenu:hover {
 /* Calculation.html */
 
 div#history {
+    margin-top: 35px;
     padding-bottom: 60px;
     overflow-y: scroll;
     height: -webkit-fill-available;
@@ -120,3 +121,42 @@ div.title{
     color: white;
     font-size: 56px;
 }
+
+/* Dropdown */
+
+div.topBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    background-color: var(--subBackground);
+}
+
+div#dropdown {
+    position: fixed;
+    top: 35px;
+    display: none;
+    height: 100%;
+    width: 30%;
+}
+
+div.showDropdown {
+    background-color: var(--background);
+    display: block !important;
+}
+
+button#topBarButtonDropdown {
+    background-color: var(--subBackgroundd);
+    color: var(--text);
+    border: none;
+    margin: 0;
+    padding: 0px 5px;
+}
+
+.burgerIcon span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: var(--text);
+    margin: 6px 0;
+  }
