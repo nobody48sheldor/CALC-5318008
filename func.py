@@ -3,12 +3,14 @@ import sympy as sym
 from math import *
 from cmath import *
 import matplotlib.pyplot as plt
+import datetime
 
 x, y, z = sym.symbols('x y z')
 f, g = sym.symbols('f g', cls=sym.Function)
 
 ans = None
 history = []
+graphNumber = 0
 
 def calculate(input):
     input = input.strip()
@@ -44,24 +46,6 @@ def calculate(input):
     if input.startswith("sym.solveset(sym.Eq"):
         input += ")"
 
-    if input.startswith("plot("):
-        parameters = input.split(",",4)
-        function = parameters[0].split("(", 1)[1]
-        xmin = float(parameters[1])
-        xmax = float(parameters[2].split(")",2)[0])
-        borders = (xmin, xmax)
-        print(function, borders)
-        plot(function, borders)
-        return ("", "graph")
-
-    if input.startswith("Binomial"):
-        parameters = input.split(",",4)
-        n = int(parameters[0].split("(", 1)[1])
-        p = float(parameters[1])
-        k = int(parameters[2].split(")",2)[0])
-        return(binomial(n, p ,k))
-
-
     if input == "clear":
         return ("", "clear")
 
@@ -74,6 +58,9 @@ def calculate(input):
         print("     -- input --     ")
         print()
         result = eval(str(input))
+
+        if input.startswith("plot("):
+            return ("", "graph")
 
         if isinstance(result,complex):
             if result.imag == 0:
@@ -89,14 +76,17 @@ def calculate(input):
 def clear():
     return "clear"
 
-def plot(function, bounds):
+def plot(function, bound1, bound2):
+    function = str(function)
+    print(function, bound1, bound2)
+    print(type(function), type(bound1), bound2)
     plt.clf()
-    x = np.linspace(bounds[0], bounds[1], 1000)
+    x = np.linspace(bound1, bound2, 1000)
     y = []
     for i in range(1000):
-        y.append(eval(function.replace("x", "({})".format((x[i])))))
+        y.append(eval(function.replace("x", f"({x[i]})")))
     plt.title(function)
     plt.plot(x, y)
-    plt.savefig("static/plot.png")
-def binomial(n, p, k):
-    return("je suis allé dodo avant de coder ca")
+    fileName = f"static/graphs/plot{datetime.datetime.now()}.png"
+    plt.savefig(fileName)
+    
