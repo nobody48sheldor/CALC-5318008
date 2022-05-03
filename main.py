@@ -49,7 +49,8 @@ def submit():
         print(calculation)
         calculation.insert(0, {
             "calculation": (value, result),
-            "type": resultType
+            "type": resultType,
+            "graphNumber": str(len(os.listdir("static/graphs"))) if resultType == "graph" else None
         })
     return(render_template("calculation.html", calculation=calculation, config=config))
 

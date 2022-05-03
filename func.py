@@ -3,14 +3,13 @@ import sympy as sym
 from math import *
 from cmath import *
 import matplotlib.pyplot as plt
-import datetime
+import os
 
 x, y, z = sym.symbols('x y z')
 f, g = sym.symbols('f g', cls=sym.Function)
 
 ans = None
 history = []
-graphNumber = 0
 
 def calculate(input):
     input = input.strip()
@@ -87,6 +86,8 @@ def plot(function, bound1, bound2):
         y.append(eval(function.replace("x", f"({x[i]})")))
     plt.title(function)
     plt.plot(x, y)
-    fileName = f"static/graphs/plot{datetime.datetime.now()}.png"
+    print(os.listdir("static/graphs"))
+    filesNumber = len(os.listdir("static/graphs")) + 1
+    fileName = f"static/graphs/plot{filesNumber}.png"
     plt.savefig(fileName)
     
