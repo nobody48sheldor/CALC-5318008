@@ -1,3 +1,4 @@
 rm static/graphs/*
-python3 main.py & sleep 0.5 & npm start
-clear
+export FLASK_APP=main
+flask run & npm start
+kill $(pgrep flask)

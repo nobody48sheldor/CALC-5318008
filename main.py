@@ -13,6 +13,11 @@ with open("config.json", "r") as file:
 calculation = []
 mode_calculation = "numerical culation"
 
+def shutdown():
+    print("shutting down")
+    os.system("killall node")
+    quit()
+
 @app.route("/")
 def home():
     return(render_template("main.html", calculation=[], config=config))
@@ -26,6 +31,8 @@ def redirectCalc():
         return(render_template("main.html", config=config))
     if value == "program":
         return(render_template("main.html", config=config))
+    if value == "shutdown":
+        shutdown()
     if value == "settings":
         return(render_template("settings.html", config=config))
     else:
@@ -53,7 +60,6 @@ def submit():
             "graphNumber": str(len(os.listdir("static/graphs"))) if resultType == "graph" else None
         })
     return(render_template("calculation.html", calculation=calculation, config=config))
-
 
 if __name__ == "__main__":
     app.run(debug=True)
