@@ -10,7 +10,7 @@
                 <p class="calculation">{{ calc['calculation'][0] }}</p>
                 <p class="answer">{{ calc['calculation'][1] }}</p>
             {% if calc['type'] == "graph" %}
-                <img src="{{url_for('static', filename='plot.png')}}">
+                <img src="{{url_for('static', filename='graphs/plot' + calc['graphNumber'] + '.png')}}">
             {% endif %}
             </div>
             <hr>
