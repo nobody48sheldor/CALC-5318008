@@ -51,6 +51,7 @@ def submit():
     if valueMenu:
         if valueMenu == "menu":
             return(render_template("main.html", config=config))
+
     result, resultType = func.calculate(valueText)
     result = str(result)
 
