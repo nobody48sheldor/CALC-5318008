@@ -19,7 +19,7 @@ def shutdown():
     if running_os() == "Linux":
         os.system("killall node")
     if running_os() == "Windows":
-        os.system("taskkill /IM 'electron' /F")
+        os.system("taskkill /IM node.exe /F")
     quit()
 
 @app.route("/")
