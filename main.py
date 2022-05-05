@@ -3,6 +3,7 @@ import func
 import json
 from flask import Flask, render_template, request, url_for
 import numpy as np
+from platform import system as running_os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24).hex()
@@ -15,7 +16,10 @@ mode_calculation = "numerical culation"
 
 def shutdown():
     print("shutting down")
-    os.system("killall node")
+    if running_os() == "Linux":
+        os.system("killall node")
+    if running_os() == "Windows":
+        os.system("taskkill /IM 'electron' /F")
     quit()
 
 @app.route("/")

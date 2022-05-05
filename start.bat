@@ -1,3 +1,4 @@
-start python main.py 
+DEL static/graph/*vim
 start npm start
-cls
+python main.py
+taskkill /IM flask" /F
