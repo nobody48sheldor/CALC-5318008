@@ -42,13 +42,12 @@ def redirectCalc():
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
-    try:
-        value = request.form["menu"]
-        if value == "menu":
+    valueMenu = request.form.get('menu', None)
+    valueText = request.form.get('text', None)
+    if valueMenu:
+        if valueMenu == "menu":
             return(render_template("main.html", config=config))
-    except:
-        value = request.form["text"]
-    result, resultType = func.calculate(value)
+    result, resultType = func.calculate(valueText)
     result = str(result)
 
     if resultType == "clear":
@@ -57,12 +56,12 @@ def submit():
     else:
         try:
             func.ans = float(result)
-            func.history.append((value,float(result)))
+            func.history.append((valueText,float(result)))
         except:
             print("ans not supported")
         print(calculation)
         calculation.insert(0, {
-            "calculation": (value, result),
+            "calculation": (valueText, result),
             "type": resultType,
             "graphNumber": str(len(os.listdir("static/graphs"))) if resultType == "graph" else None
         })
