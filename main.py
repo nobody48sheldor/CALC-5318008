@@ -17,7 +17,8 @@ mode_calculation = "numerical culation"
 def shutdown():
     print("shutting down")
     if running_os() == "Linux":
-        os.system("killall node")
+        print("killing node")
+        os.system("killall node & kill $(pgrep electron)")
     if running_os() == "Windows":
         os.system("taskkill /IM node.exe /F")
     quit()
