@@ -34,7 +34,7 @@ def redirectCalc():
     if value == "graph":
         return(render_template("main.html", config=config))
     if value == "program":
-        return(render_template("main.html", config=config))
+        return(render_template("programmation.html", config=config))
     if value == "shutdown":
         shutdown()
     if value == "settings":
