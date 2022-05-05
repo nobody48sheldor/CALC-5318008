@@ -35,12 +35,19 @@ def redirectCalc():
         shutdown()
     if value == "settings":
         return(render_template("settings.html", config=config))
+    if value == "menu":
+        return(render_template("main.html", config=config))
     else:
         return(render_template("main.html", config=config))
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
-    value = request.form["text"]
+    try:
+        value = request.form["menu"]
+        if value == "menu":
+            return(render_template("main.html", config=config))
+    except:
+        value = request.form["text"]
     result, resultType = func.calculate(value)
     result = str(result)
 
