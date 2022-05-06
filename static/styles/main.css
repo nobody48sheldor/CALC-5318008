@@ -17,6 +17,10 @@ div#title {
     font-size: xx-large;
 }
 
+div.programmation{
+    margin-top: 70px;
+}
+
 .gridContainer {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -138,6 +142,7 @@ div#dropdown {
     display: none;
     height: 100%;
     width: 30%;
+    z-index: 100;
 }
 
 div.showDropdown {
