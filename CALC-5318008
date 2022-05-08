@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cd /home/$(users)/.config/CALC-5318008
 rm static/graphs/*
 export FLASK_APP=main
