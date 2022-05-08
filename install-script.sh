@@ -43,13 +43,12 @@ wget https://pyscript.net/alpha/pyscript.js
 
 cd ../styles
 
-wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/main.css
+wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/styles/main.css
 
 cd themes
 
-wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/main.css
-wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/themes/dark.css
-wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/themes/default.css
+wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/styles/themes/dark.css
+wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/static/styles/themes/default.css
 
 cd ../../..
 
