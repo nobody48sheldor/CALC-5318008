@@ -47,6 +47,13 @@ tau, Nan...
 
 ## Installation
 
+## clean install for raspberry (or any debian-based distro)
+
+- in terminal
+`wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/install-script.sh; chmod +x install-script.sh; ./install-script.sh; rm install-script.sh`
+
+## install from github
+
 ###  general requirement :
 
 - [Python](https://www.python.org/)

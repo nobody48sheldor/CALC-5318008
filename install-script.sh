@@ -76,4 +76,3 @@ cd /bin
 wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/CALC-5318008.sh
 
 sudo chmod +x CALC-5318008.sh
-
