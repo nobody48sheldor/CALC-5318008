@@ -64,7 +64,7 @@ echo installing Python dependancies...
 pip3 install sympy
 pip3 install numpy
 pip3 install matplotlib
-pip3 install falsk
+pip3 install flask
 
 # starter
 
@@ -72,6 +72,6 @@ echo making the starter...
 
 cd /bin
 
-wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/CALC-5318008
+sudo wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/CALC-5318008
 
 sudo chmod +x CALC-5318008
