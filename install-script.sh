@@ -1,7 +1,7 @@
 # source
 
-mkdir /home/$(users)/.config/CALC-5318008
-cd /home/$(users)/.config/CALC-5318008
+mkdir /home/$(whoami)/.config/CALC-5318008
+cd /home/$(whoami)/.config/CALC-5318008
 
 # general dependencies
 
