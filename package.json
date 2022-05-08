@@ -1,7 +1,7 @@
 {
-    "name": "electron-quick-start",
-    "version": "1.0.0",
-    "description": "A minimal Electron application",
+    "name": "CALC-5318008",
+    "version": "1.0",
+    "description": "calculator app",
     "main": "main.js",
     "scripts": {
         "start": "electron ."

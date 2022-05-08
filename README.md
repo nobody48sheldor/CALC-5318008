@@ -25,7 +25,7 @@ In theory it should be from the **raspberry-pi 3**
 ### System
 - `clear` to cleanup
 - `ans` for the latest result
-- `history` for the history
+- `history[]` for the history
 
 ### Numbers:
 - `ans` previous result (initialised with `None`) 
@@ -52,6 +52,8 @@ tau, Nan...
 - [Python](https://www.python.org/)
 - [NodeJS](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
+- [FLASK](https://flask.palletsprojects.com/en/2.1.x/)
+- [wget](https://www.gnu.org/software/wget/)
 
 ### GNU/LINUX and FreeBSD :
 ```
@@ -62,7 +64,7 @@ to start :
 
 ` > ./start.sh `
 
-### WINDOWS :
+### WINDOWS [not fully functional] :
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008/tree/main
 ```
