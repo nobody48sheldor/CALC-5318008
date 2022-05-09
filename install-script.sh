@@ -7,6 +7,12 @@ cd /home/$(whoami)/.config/CALC-5318008
 
 sudo apt install python3 python-pip python-flask nodejs npm openbox
 
+# openbox config
+
+mkdir ./config/openbox
+touch ./config/openbox/autostart
+echo CALC-5318008 >> ./config/openbox/autostart
+
 # building CALC-5318008 
 
 echo building CALC-5318008 ...

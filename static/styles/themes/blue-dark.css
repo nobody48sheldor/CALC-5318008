@@ -1,0 +1,10 @@
+body {
+    --text: #21417C;
+    --textHover: white;
+    --answer: #0B9FF7;
+    --background: #041N29;
+    --subBackground: #031621;
+    --border: black;
+    --hr: #ccc;
+    --mainMenuButtonBackground: #113042;
+}
