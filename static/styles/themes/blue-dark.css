@@ -2,9 +2,11 @@ body {
     --text: #21417C;
     --textHover: white;
     --answer: #0B9FF7;
-    --background: #041N29;
+    --background: #000824;
     --subBackground: #031621;
     --border: black;
     --hr: #ccc;
     --mainMenuButtonBackground: #113042;
+    --onFocus: #53a6ff;
+    --onFocusBackground: #000824;
 }

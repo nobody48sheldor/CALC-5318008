@@ -7,4 +7,6 @@ body {
     --border: black;
     --hr: #ccc;
     --mainMenuButtonBackground: #555555;
+    --onFocus: #000000;
+    --onFocusBackground: white;
 }

@@ -4,6 +4,8 @@
 
 {% if config["theme"] == "dark" %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/themes/dark.css') }}">
+{% elif config["theme"] == "blue-dark" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/themes/blue-dark.css') }}">
 {% else %}
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/themes/default.css') }}">
 {% endif %}

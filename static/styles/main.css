@@ -6,6 +6,12 @@ html, body, .content {
     color: var(--text);
 }
 
+:focus{
+    background: var(--onFocusBackground);
+    outline: none;
+    border: 1px solid var(--onFocus) !important;
+}
+
 /* Main.html */
 
 div#title {
