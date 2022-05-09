@@ -61,7 +61,7 @@ button.buttonMenu:hover {
 
 div#history {
     margin-top: 35px;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
     overflow-y: scroll;
     height: -webkit-fill-available;
     display: flex;
