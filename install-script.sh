@@ -5,7 +5,7 @@ cd /home/$(whoami)/.config/CALC-5318008
 
 # general dependencies
 
-sudo apt install python3 python-pip python-flask nodejs npm openbox
+sudo apt install python3 python3-pip python3-flask nodejs npm openbox
 
 # openbox config
 
