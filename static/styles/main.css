@@ -1,9 +1,13 @@
 html, body, .content {
     height: 100%;
     margin: 0px;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: var(--background);
     color: var(--text);
+}
+
+.example::-webkit-scrollbar {
+  display: none;
 }
 
 :focus{

@@ -1,24 +1,19 @@
 {% extends "theme.html" %}
 
 {% block content %}
-<head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <title>REPL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="stylesheet" href={{ url_for("static", filename="pyscript/pyscript.css") }} />
+<script defer src={{ url_for("static", filename="pyscript/pyscript.js") }} ></script>
 
-        <link rel="icon" type="image/png" href="favicon.png" />
-	<link rel="stylesheet" href={{ url_for("static", filename="pyscript/pyscript.css") }} />
-	<script defer src={{ url_for("static", filename="pyscript/pyscript.js") }} ></script>
-</head>
 
-<body>
-	<div id="title">
-		<p>PROGRAMMATION</p>
-	</div>
-        <div class="programmation">
-        	<py-repl id="my-repl" auto-generate="true"> </py-repl>
-        </div>
-</body>
+<div id="title">
+	<p>PROGRAMMATION</p>
+</div>
+
+<div class="programmation">
+		<py-repl id="my-repl" auto-generate="true"> </py-repl>
+</div>
 
 {% endblock %}
