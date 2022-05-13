@@ -4,11 +4,14 @@
 
 <div id="history" >
 
+    {% set count = namespace(value=0) %}
     {% for calc in calculation %}
         <div class="historyItem" onload="autoScroll">
             <div class="historyItemContent">
-                <p class="calculation">{{ calc['calculation'][0] }}</p>
-                <p class="answer">{{ calc['calculation'][1] }}</p>
+                <p class="calculation" tabindex="{{ count.value }}">{{ calc['calculation'][0] }}</p>
+                {% set count.value = count.value + 1 %}
+                <p class="answer" tabindex="{{ count.value }}">{{ calc['calculation'][1] }}</p>
+                {% set count.value = count.value + 1 %}
             {% if calc['type'] == "graph" %}
                 <img src="{{url_for('static', filename='graphs/plot' + calc['graphNumber'] + '.png')}}">
             {% endif %}

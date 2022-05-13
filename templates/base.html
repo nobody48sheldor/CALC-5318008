@@ -83,6 +83,10 @@
 			try {
 				return document.getElementById("inputTextArea").focus()
 			} catch {}
+			// Programmation
+			try {
+				return document.querySelectorAll('[role="textbox"]')[0].focus()
+			} catch {}
 		}
 
 		function focusNextElement () {
