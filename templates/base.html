@@ -50,6 +50,68 @@
 				dropdown.classList.add('showDropdown');
 			}
 		}
+
+		document.onkeydown = function(e) {
+			switch (e.keyCode) {
+				case 37:
+				console.log("moveLeft")
+				focusPreviousElement()
+				break;
+				case 38:
+				console.log("moveUp;")
+				break;
+				case 39:
+				console.log("moveRight;")
+				focusNextElement();
+				break;
+				case 40:
+				console.log("moveDown;")
+				break;
+			}
+		};
+
+		function focusNextElement () {
+			//add all elements we want to include in our selection
+			let focussableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+			if (document.activeElement && document.activeElement.form) {
+				let focussable = Array.prototype.filter.call(document.querySelectorAll(focussableElements),
+				function (element) {
+					//check for visibility while always include the current activeElement 
+					return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement
+				});
+				let index = focussable.indexOf(document.activeElement);
+				console.log(index)
+				if(index > -1) {
+					console.log(focussable)
+					let nextElement = focussable[index + 1] || focussable[0];
+					nextElement.focus();
+				}                    
+			}
+		}
+
+		function focusPreviousElement () {
+			//add all elements we want to include in our selection
+			let focussableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+			console.log("1")
+			console.log(document)
+			if (document.activeElement && document.activeElement.form) {
+				console.log("2")
+				let focussable = Array.prototype.filter.call(document.querySelectorAll(focussableElements),
+				function (element) {
+					//check for visibility while always include the current activeElement 
+					return element.offsetWidth > 0 || element.offsetHeight > 0 || element === document.activeElement
+				});
+				console.log("3")
+				let index = focussable.indexOf(document.activeElement);
+				console.log(index)
+				if(index > 0) {
+					console.log(focussable)
+					let nextElement = focussable[index - 1] || focussable[focussable.length-1];
+					nextElement.focus();
+				}                    
+			}
+		}
+
 	</script>
     
 </body>
