@@ -25,7 +25,7 @@
 	<div id="dropdown">
 		<form action="/" class="menu" method="post">
             <input type="hidden" value="menu" name="menu">
-            <button class="buttonMenu">MENU</button>
+            <button class="buttonMenu" id="dropdownFirtElement">MENU</button>
         </form>
 		<form action="#" class="menu" method="post">
             <input type="hidden" value="settings" name="menu">
@@ -46,12 +46,15 @@
 			let dropdown = document.getElementById("dropdown");
 			if (dropdown.classList.contains('showDropdown')) {
 				dropdown.classList.remove('showDropdown');
+				document.getElementById("menuFirtElement").focus()
 			} else {
 				dropdown.classList.add('showDropdown');
+				document.getElementById("dropdownFirtElement").focus()
 			}
 		}
 
 		document.onkeydown = function(e) {
+			console.log(e.keyCode)
 			switch (e.keyCode) {
 				case 37:
 				console.log("moveLeft")
@@ -67,12 +70,15 @@
 				case 40:
 				console.log("moveDown;")
 				break;
+				case 120:
+				openOrCloseBurger();
+				break;
 			}
 		};
 
 		function focusNextElement () {
 			//add all elements we want to include in our selection
-			let focussableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+			let focussableElements = 'a:not([disabled]), button:not([disabled], #topBarButtonDropdown), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
 			if (document.activeElement && document.activeElement.form) {
 				let focussable = Array.prototype.filter.call(document.querySelectorAll(focussableElements),
 				function (element) {
@@ -91,7 +97,7 @@
 
 		function focusPreviousElement () {
 			//add all elements we want to include in our selection
-			let focussableElements = 'a:not([disabled]), button:not([disabled]), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
+			let focussableElements = 'a:not([disabled]), button:not([disabled], #topBarButtonDropdown), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
 			console.log("1")
 			console.log(document)
 			if (document.activeElement && document.activeElement.form) {
@@ -104,7 +110,7 @@
 				console.log("3")
 				let index = focussable.indexOf(document.activeElement);
 				console.log(index)
-				if(index > 0) {
+				if(index > -1) {
 					console.log(focussable)
 					let nextElement = focussable[index - 1] || focussable[focussable.length-1];
 					nextElement.focus();
