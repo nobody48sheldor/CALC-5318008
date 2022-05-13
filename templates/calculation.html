@@ -22,7 +22,7 @@
 
 <div id="inputArea" >
     <form action="{{ url_for('submit') }}" method="post">
-        <input id="inputTextArea" autofocus name="text" type="text" value="{{ request.form['content'] }}">
+        <input id="inputTextArea" autofocus name="text" type="text" value="{{ request.form['content'] }}" required>
         <input id="submitButton" type="submit">
     </form>
 </div>
