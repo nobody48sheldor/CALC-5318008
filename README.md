@@ -11,7 +11,6 @@ In theory it should be from the **raspberry-pi 3**
 ## What can it do ?
 
  ### Formal calculation (give the formula) and numerical answers
- 
 - the usual `+, -, /, *, ^`
 - calculus `∂/∂x (y and z also), ∫, lim, ODE`
 - equations
@@ -45,43 +44,43 @@ tau, Nan...
 -  `sin(x)`, `cos(x)`... to get the output of the function at x
 - BUT, `Sin(x)`, `Cos(x)`... to get the function, in order to integrate or take the derivative for example
 
+## Controls
+<kbd>F9</kbd> : open menu
+
 ## Installation
 
-## clean install for raspberry (or any debian-based distro)
+## Clean install for raspberry (or any debian-based distro)
 
-- in terminal
+**In terminal :**
 ```
 wget https://raw.githubusercontent.com/nobody48sheldor/CALC-5318008/main/install-script.sh; chmod +x install-script.sh; ./install-script.sh; rm install-script.sh
 ```
 
-## install from github
+## Install from github
 
-###  general requirement :
-
-- [Python](https://www.python.org/)
+### General requirements :
 - [NodeJS](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
-- [FLASK](https://flask.palletsprojects.com/en/2.1.x/)
-- [wget](https://www.gnu.org/software/wget/)
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+- [Wget](https://www.gnu.org/software/wget/)
 
 ### GNU/LINUX and FreeBSD :
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008/tree/main
 > ./install.sh
 ```
-to start : 
-
+**To start :**
 ` > ./start.sh `
 
 ### WINDOWS [not fully functional] :
 ```
 > git clone https://github.com/nobody48sheldor/CALC-5318008/tree/main
 ```
-- double click on `"install.bat"`
+- Double click on `"install.bat"`
 
-to start :
-
-- double click on `"start.bat"`
+**To start :**
+- Double click on `"start.bat"`
 
 
 ## Contributors
