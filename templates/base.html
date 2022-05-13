@@ -46,7 +46,7 @@
 			let dropdown = document.getElementById("dropdown");
 			if (dropdown.classList.contains('showDropdown')) {
 				dropdown.classList.remove('showDropdown');
-				document.getElementById("menuFirtElement").focus()
+				defaultFocus()
 			} else {
 				dropdown.classList.add('showDropdown');
 				document.getElementById("dropdownFirtElement").focus()
@@ -76,6 +76,15 @@
 			}
 		};
 
+		function defaultFocus() {
+			try {
+				return document.getElementById("menuFirtElement").focus()
+			} catch {}
+			try {
+				return document.getElementById("inputTextArea").focus()
+			} catch {}
+		}
+
 		function focusNextElement () {
 			//add all elements we want to include in our selection
 			let focussableElements = 'a:not([disabled]), button:not([disabled], #topBarButtonDropdown), input[type=text]:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])';
@@ -92,6 +101,8 @@
 					let nextElement = focussable[index + 1] || focussable[0];
 					nextElement.focus();
 				}                    
+			} else {
+				defaultFocus()
 			}
 		}
 
@@ -115,6 +126,8 @@
 					let nextElement = focussable[index - 1] || focussable[focussable.length-1];
 					nextElement.focus();
 				}                    
+			} else {
+				defaultFocus()
 			}
 		}
 
