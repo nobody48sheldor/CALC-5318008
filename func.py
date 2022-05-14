@@ -8,8 +8,20 @@ import os
 x, y, z = sym.symbols('x y z')
 f, g = sym.symbols('f g', cls=sym.Function)
 
+a = "a"
+b = "b"
+c = "c"
+d = "d"
+
 ans = None
 history = []
+
+var={
+    "a":float(),
+    "b":float(),
+    "c":float(),
+    "d":float()
+}
 
 def calculate(input):
     input = input.strip()
@@ -41,6 +53,11 @@ def calculate(input):
     input = input.replace("ln", "log")
     input = input.replace("Log", "sym.log")
     input = input.replace("gcd", "np.gcd")
+    input = input.replace("matrix", "np.matrix")
+    input = input.replace("var_a", "var['a']")
+    input = input.replace("var_b", "var['b']")
+    input = input.replace("var_c", "var['c']")
+    input = input.replace("var_d", "var['d']")
 
     if input.startswith("sym.solveset(sym.Eq"):
         input += ")"
@@ -90,4 +107,7 @@ def plot(function, bound1, bound2):
     filesNumber = len(os.listdir("static/graphs")) + 1
     fileName = f"static/graphs/plot{filesNumber}.png"
     plt.savefig(fileName)
-    
+
+def set(variable, val):
+    var[variable] = float(val)
+    return(f"set {variable} to {val}")
