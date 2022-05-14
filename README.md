@@ -28,11 +28,12 @@ In theory it should be from the **raspberry-pi 3**
 
 ### Numbers:
 - `ans` previous result (initialised with `None`) 
+- `var_[]` variabe (exist for a, b, c, d), use set([], value)
 - `inf` or `oo` for infinity
 - `pi` or  `𝜋` for pi
 - `e` for Euler's number
 - `j` for i (the imaginary unit)
-tau, Nan...
+- tau, Nan...
 
 ### Functions
 - `I(f(x))` for integral [`I(f(x), (x, lower_bound, upper_bound))`]
@@ -43,6 +44,8 @@ tau, Nan...
 - `plot(function, x-lower-bound, x-upper-bound)` for 2D plots
 -  `sin(x)`, `cos(x)`... to get the output of the function at x
 - BUT, `Sin(x)`, `Cos(x)`... to get the function, in order to integrate or take the derivative for example
+- matrix for numpy's matrix
+- set(variable name (a, b, c or d), value)
 
 ## Controls
 <kbd>F9</kbd> : open menu

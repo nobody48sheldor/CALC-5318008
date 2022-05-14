@@ -109,5 +109,5 @@ def plot(function, bound1, bound2):
     plt.savefig(fileName)
 
 def set(variable, val):
-    var[variable] = float(val)
+    var[variable] = val
     return(f"set {variable} to {val}")
