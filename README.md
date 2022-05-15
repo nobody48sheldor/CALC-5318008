@@ -44,11 +44,12 @@ In theory it should be from the **raspberry-pi 3**
 - `plot(function, x-lower-bound, x-upper-bound)` for 2D plots
 -  `sin(x)`, `cos(x)`... to get the output of the function at x
 - BUT, `Sin(x)`, `Cos(x)`... to get the function, in order to integrate or take the derivative for example
-- matrix for numpy's matrix
-- set(variable name (a, b, c or d), value)
+- `matrix` for numpy's matrix
+- `set(variable name (a, b, c or d), value)` for changing variable values
 
 ## Controls
 <kbd>F9</kbd> : open menu
+<kbd><-</kbd>, <kbd>-></kbd> : to move around
 
 ## Installation
 
