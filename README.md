@@ -49,6 +49,7 @@ In theory it should be from the **raspberry-pi 3**
 
 ## Controls
 <kbd>F9</kbd> : open menu
+
 <kbd><-</kbd>, <kbd>-></kbd> : to move around
 
 ## Installation
